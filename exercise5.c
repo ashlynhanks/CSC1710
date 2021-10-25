@@ -1,26 +1,41 @@
-//Ashlyn Hanks
-//Exercise 5
-
+// Ashlyn Hanks
+// Exercise 5
 
 #include <stdio.h>
-int main(void)
+int main()
 
 {
 
-	int n, ntwo;
-
-	printf("TABLE OF POWERS OF TWO\n\n");
-	printf("n             n squared\n");
-	printf("--            --------\n");
-
-	ntwo=1;
+	int number, right_digit;
 	
-	for (n=0; n<=10; ++n)
+	printf("Please enter a digit:\n");
+	scanf("%i", &number);
+	printf("Reversed number: \n");
+	
+	if(number <0)
 	{
-	printf("%i            %i       \n", n, n*n);
-
+	   number = -number;
+	
+	while (number !=0)
+	{
+	    right_digit = number % 10;
+	    number /=10;
+	    printf("%i", right_digit);
 	}
-
-
+	
+	printf("-\n");
+	}
+	
+	else 
+	{
+	    while (number !=0)
+	    {
+		right_digit = number % 10;
+		number /= 10;
+		printf("%i", right_digit);
+	    }
+	    printf("\n");
+	}
+	
 	return 0;
 }

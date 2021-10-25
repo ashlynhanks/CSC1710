@@ -1,27 +1,27 @@
 //Ashlyn Hanks
-//Exercise 4
-
-
+//Exercise 3
+//take two integer values, divide them 
 
 #include <stdio.h>
-
 int main()
 
 {
 
-	int n;
-	int trin;
-	printf("N          Triangle Number\n");
-	printf("--------------------------\n");
-
-	for (n=5; n<=50; n++)
+	float a,b;
+	
+	printf("Please enter the first number:\n");
+	scanf("%f", &a);
+	
+	printf("Please enter the second number:\n");
+	scanf("%f", &b);
+	
+	if(a/b!=0)
 	{
-	trin= n*(n+1);
-	trin = trin/2;
-
-	printf("%i                  %i     \n", n,trin);
+	    printf("%f divided by %f = %f\n", a, b, (a/b));
 	}
-
-
+	else 
+	{
+	    printf("The numbers entered did not work, try again.\n");
+	}
 	return 0;
 }
