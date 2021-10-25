@@ -1,31 +1,27 @@
-//Make a program that takes two integer values from the user, and checks to see if the first is divisible by the second
 //Ashlyn Hanks
-//Exercise 2
-
+//Dr. Pittman 
+//home/student/ahanks/csc1710/chap6
 
 #include <stdio.h>
-int main()
 
+int main(void)
 {
-	int a,b;
-	printf("Please enter first integer:");
-	scanf("%i", &a);
-	
-	printf("Please enter second integer:");
-	scanf("%i", &b);
-	
-	if(a%b==0)
-	{
-	    printf("The program worked!\n");
-	}
-	else
-	{
-	    printf("The program didn't work\n");
-	}
+	int values[10];
+	int index;
 
+	for (index = 0; index < 10; ++index)
+		values[index] = 0;
 
+	values[0]  = 197;
+	values[2]  = -100;
+	values[5]  = 350;
+	values[3]  = values[0] + values[5];
+	values[9] = 
+	values[5] / 10;
+	--values[2];
 
-
+	for (index = 0; index < 10; ++index)
+		printf("values[%i] = %i\n", index, values[index]);
 
 	return 0;
 }
