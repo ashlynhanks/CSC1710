@@ -1,25 +1,27 @@
 //Ashlyn Hanks
-//Exercise 10
 
 
 #include <stdio.h>
 
-int main()
+/* functions */
+int arraySum(int [], int);
+
+int arraySum(int a[], int n)
 {
-	int n, sum=0,m;
-	
-	printf("Enter a number:");
-	scanf("%d", &n);
-	
-	while(n>0)
-	{
-	
-	m=n%10;
-	sum=sum+m;
-	n=n/10;
-	}
-	
-	printf("Sum is %d", sum);
+	int i, sum = 0;
+
+	for (i = 0; i < n; ++i)
+		sum += a[i];
+
+	return sum;
+}
+
+int main(void)
+{
+	int arraySum(int a[], int n);
+
+	int array[5] = { 1, 5, 21, 18, 5 };
+	printf("%i\n", arraySum(array, 5));
 
 	return 0;
 }
